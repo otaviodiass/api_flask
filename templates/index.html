@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask</title>
+</head>
+<body>
+<div>
+    <h1>Busque um dado:</h1>
+    <form action="{{ url_for('query_records')}}" method="get">
+        <input type="text" name="name" placeholder="Insira um nome">
+        <button>Enviar</button>
+    </form>
+</div>
+<div>
+    <h1>Insira um dado:</h1>
+    <form action="{{ url_for('create_record')}}" method="post">
+        <input type="text" name="name" placeholder="Insira um nome">
+        <input type="text" name="email" placeholder="Insira o email">
+        <button>Enviar</button>
+    </form>
+</div>
+<div>
+    <h1>Altere um dado:</h1>
+    <form action="{{ url_for('update_record')}}" method="post">
+        <input type="text" name="name" placeholder="Insira um nome">
+        <input type="text" name="email" placeholder="Insira o email">
+        <button>Enviar</button>
+    </form>
+</div>
+<div>
+    <h1>Delete um dado:</h1>
+    <form action="{{ url_for('delete_record')}}" method="post">
+        <input type="text" name="name" placeholder="Insira um nome">
+        <input type="text" name="email" placeholder="Insira o email">
+        <button>Enviar</button>
+    </form>
+</div>
+</body>
+</html>
